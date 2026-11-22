@@ -1,4 +1,4 @@
-# Empirical Risk Premia Engine — v0.2.4
+# Empirical Risk Premia Engine
 
 Multi-asset **pricing, factor-risk decomposition, identification and empirical conditional-premia research**. The shared Equity and Rates modules from v0.2.3 remain intact, with the original **Rates v0.8 Fama–Bliss / Cochrane–Piazzesi-style empirical bond-premia layer ported as an actual Python package**, not a notebook-only appendix.
 
