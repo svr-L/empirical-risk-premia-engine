@@ -1654,8 +1654,8 @@ def build_v08_state_panel(rates:RatesPremiaEngine, macro_raw:pd.DataFrame|None=N
         state['pc_'+fac.lower()]=rates.factor_scores_1sigma[fac]
     m=macro_raw.copy();m.index=pd.DatetimeIndex(m.index)+pd.offsets.MonthEnd(0)
     m=m.sort_index().loc[:z.index.max()].resample('ME').last()
-    state['inflation_yoy']=m['CPI'].pct_change(12).shift(1)
-    state['growth_yoy']=m['INDPRO'].pct_change(12).shift(1)
+    state['inflation_yoy']=m['CPI'].pct_change(12,fill_method=None).shift(1)
+    state['growth_yoy']=m['INDPRO'].pct_change(12,fill_method=None).shift(1)
     cash=rates.data.fedfunds.copy();cash.index=pd.DatetimeIndex(cash.index)+pd.offsets.MonthEnd(0)
     state['fedfunds']=cash.resample('ME').last().shift(1)
     state['breakeven10y']=m['BREAKEVEN10Y']/100.
