@@ -19,3 +19,6 @@ from .equity_shocks import (EconomicShockPanel, load_jk_monetary_shocks,
 __version__ = '0.12.1'
 __all__ += ['EquityV012Result','analyze_equity_v012','EconomicShockPanel',
             'load_jk_monetary_shocks','load_inflation_release_surprises','analyze_equity_shock_mapping','estimate_jk_shock_prices']
+from .equity_shock_followup import ShockFollowup, analyze_rolling_shocks
+__version__ = '0.12.2'
+__all__ += ['ShockFollowup','analyze_rolling_shocks']

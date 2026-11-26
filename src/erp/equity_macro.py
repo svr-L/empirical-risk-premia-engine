@@ -157,3 +157,28 @@ def make_equity_macro_panel(raw,provenance=None):
     meta['as_of']=str(r.index.max().date())
     meta['first_complete_state_month']=str(states.dropna().index.min().date()) if len(states.dropna()) else None
     return EquityMacroPanel(r,states,changes,meta)
+
+
+def find_complete_equity_fred_file(roots, *, explicit=None):
+    """Find a *valid complete* combined FRED CSV/ZIP, not simply newest name.
+
+    An explicit path is authoritative and must be valid. Auto-discovery skips
+    unrelated or partial files (e.g. the Rates FRED download).
+    """
+    def check(p):
+        raw=_parse_csv_bytes(p.read_bytes())
+        absent=set(FRED_IDS)-set(raw.columns)
+        if absent:raise ValueError('Missing series: '+', '.join(sorted(absent)))
+        if raw[list(FRED_IDS)].dropna().empty:raise ValueError('No complete macro observations')
+    if explicit is not None:
+        p=Path(explicit);check(p);return p,[]
+    candidates=set()
+    for root in map(Path,roots):
+        if root.is_dir():
+            for pattern in ('fredgraph*.zip','fredgraph*.csv','fred_equity_macro_raw.csv','fred_raw_levels.csv'):
+                candidates.update(p.resolve() for p in root.glob(pattern) if p.is_file())
+    rejected=[]
+    for p in sorted(candidates,key=lambda q:q.stat().st_mtime,reverse=True):
+        try:check(p);return p,rejected
+        except (ValueError,OSError,zipfile.BadZipFile) as e:rejected.append({'path':str(p),'reason':str(e)[:180]})
+    return None,rejected
