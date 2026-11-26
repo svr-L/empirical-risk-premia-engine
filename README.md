@@ -115,3 +115,6 @@ The legacy `research.export` retains all `rates_v08_*.csv`; `v09.export()` separ
 **Equity:** Now add predeclared residual PCA/FMP as traded premia factors and the 130 test portfolios; compare `FMB λ`, traded factor means and model-implied pricing across distinct test universes, checking FMB cross-section intercept/rank/dispersion, and subsequently add robust SDF/GMM. **Fama–MacBeth and traded factor return means are not interchangeable unconditional parameters** unless the model identifies the traded factors appropriately.
 
 Alpha Slicer and Tail-Aware Alpha Referee remain *separate* research questions and repositories; consume common factor data/metadata via exports rather than sharing their internal certification logic with this engine. Rates premia rotation is a candidate input for TAA, not an achieved trading outcome.
+
+## v0.12.2 — rolling economic follow-up
+Use `notebooks/Equity_Factor_Discovery_and_Pricing_v0_12_2_PORTABLE.ipynb`. See `EQUITY_V0122_RESEARCH.md` and `RELEASE_VALIDATION_V0122.md`. Dedicated common-calendar economic mapping and pricing for FF/AQR and all six RP rolling returns; FRED upload validation and fallback. Previous discovery methods and Rates source are unchanged.
