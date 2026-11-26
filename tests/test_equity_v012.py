@@ -87,7 +87,11 @@ def test_jk_exact_identity_and_parser():
     assert 'SP500_hf' not in out # high-frequency EQUITY response is not a monetary shock
     assert np.allclose(out.MP_median+out.CBI_median,out.pc1_hf)
     bad=df.copy();bad.loc[5,'pc1_hf']+=.4
-    with pytest.raises(ValueError,match='identity'):_jk_parse(bad.to_csv(index=False).encode())
+    with pytest.warns(RuntimeWarning,match='valid median decomposition'):
+        parsed=_jk_parse(bad.to_csv(index=False).encode())
+    assert parsed.iloc[5].isna().all()
+    severe=df.copy();severe.loc[:20,'pc1_hf']+=.4
+    with pytest.raises(ValueError,match='inconsistent months'):_jk_parse(severe.to_csv(index=False).encode())
 
 
 def test_jk_loader_cache_and_no_lookahead(tmp_path):
