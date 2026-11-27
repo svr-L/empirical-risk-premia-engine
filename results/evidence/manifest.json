@@ -1,0 +1,26 @@
+[
+  {
+    "file": "equity_v013_executed.ipynb",
+    "original_file": "Equity_Factor_Discovery_and_Pricing_v0_13_PORTABLE(1).ipynb",
+    "original_sha256": "735c8441e8c6b53d9722c77d8c2e85c3a7ce1fd2be842d55a5d5b5c4ec6a2c5f",
+    "published_sha256": "350fc66bcf6987c0f01a5a5dc801d2ce532dccd4517d1996d2f21a2471b8b3d5",
+    "embedded_release": "0.13.0",
+    "changes": "Removed transient Colab metadata, widget MIME and non-table HTML; analytical code and printed/tabular output retained."
+  },
+  {
+    "file": "rates_v025_executed.ipynb",
+    "original_file": "Rates_Premia_v0_2_5_PORTABLE(1).ipynb",
+    "original_sha256": "4be46b1b0325573ac214c6f167e442327a451992a3ef58eda93b225215e5a208",
+    "published_sha256": "90b751398c25b6c0f8b0797bef0b561c3a5a4e051d951df8d9e8efa9ef195656",
+    "embedded_release": "0.2.5",
+    "changes": "Removed transient Colab metadata, widget MIME and non-table HTML; analytical code and printed/tabular output retained."
+  },
+  {
+    "file": "equity_standard_executed.ipynb",
+    "original_file": "Equity_Premia_v0_10_PORTABLE(1).ipynb",
+    "original_sha256": "dbff3365c9b6a1e6a4153e62672ae17eb740a7f3462448926f7bf29fdc36a404",
+    "published_sha256": "8a5194b40b06164b67677bfeed2d612b00cb0cd4cb05378c9cb362589d97c131",
+    "embedded_release": "historical standard-model notebook",
+    "changes": "Removed transient Colab metadata, widget MIME and non-table HTML; analytical code and printed/tabular output retained."
+  }
+]

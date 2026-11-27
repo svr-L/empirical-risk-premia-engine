@@ -1,0 +1,3 @@
+comparison,benchmark_rmse_decimal,challenger_rmse_decimal,relative_reduction_pct,metric,n_months,panel
+Equity: shrinkage vs plain rolling FMB,0.02069,0.01648,20.347994200096654,annualized cross-sectional RMSE of mean OOS pricing errors,176,EQUITY
+Equity: joint residual + funded Rates addition,0.01648,0.01521,7.706310679611661,annualized cross-sectional RMSE of mean OOS pricing errors,176,FUNDED_RATES

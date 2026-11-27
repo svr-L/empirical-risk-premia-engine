@@ -1,0 +1,22 @@
+table,notebook,cell_index,output_index,units
+equity_dynamic_equity.csv,equity_v013_executed.ipynb,33,1,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_dynamic_jk.csv,equity_v013_executed.ipynb,33,3,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_dynamic_fred_proxy.csv,equity_v013_executed.ipynb,33,5,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_dynamic_managed.csv,equity_v013_executed.ipynb,33,7,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_dynamic_funded_rates.csv,equity_v013_executed.ipynb,33,9,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_dynamic_etf_proxy.csv,equity_v013_executed.ipynb,33,12,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_dynamic_joint_xa.csv,equity_v013_executed.ipynb,33,15,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_static_rpc.csv,equity_v013_executed.ipynb,5,1,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_rolling_rp.csv,equity_v013_executed.ipynb,17,1,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_constrained_rp.csv,equity_v013_executed.ipynb,27,0,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_joint_cross_asset_decomposition.csv,equity_v013_executed.ipynb,33,16,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_experiment_status.csv,equity_v013_executed.ipynb,33,18,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_standard_benchmarks.csv,equity_standard_executed.ipynb,7,0,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+equity_standard_spanning.csv,equity_standard_executed.ipynb,11,6,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_pca_variance.csv,rates_v025_executed.ipynb,5,3,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_funded_mean.csv,rates_v025_executed.ipynb,5,1,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_fama_bliss_classic.csv,rates_v025_executed.ipynb,9,1,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_forecast_scores.csv,rates_v025_executed.ipynb,9,3,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_rotation_scores.csv,rates_v025_executed.ipynb,11,1,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_rotation_spreads.csv,rates_v025_executed.ipynb,11,3,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
+rates_cost_sensitivity.csv,rates_v025_executed.ipynb,11,5,As displayed in source; returns and RMSE generally decimals unless source states otherwise.
